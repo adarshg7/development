@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>House Price Predictor | AI Insights</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="glass-container">
+        <header>
+            <h1>House Price <span class="accent">Predictor</span></h1>
+            <p>Enter property details to get an AI-powered valuation.</p>
+        </header>
+
+        <form id="predictionForm">
+            <div class="form-grid">
+                <div class="form-section">
+                    <h3>General Info</h3>
+                    <div class="input-group">
+                        <label for="MSSubClass">Class</label>
+                        <input type="number" id="MSSubClass" value="60" required>
+                    </div>
+                    <div class="input-group">
+                        <label for="LotArea">Lot Area (sqft)</label>
+                        <input type="number" id="LotArea" value="8450" required>
+                    </div>
+                    <div class="input-group">
+                        <label for="Neighborhood">Neighborhood</label>
+                        <select id="Neighborhood">
+                            <option value="CollgCr">College Creek</option>
+                            <option value="Veenker">Veenker</option>
+                            <option value="Crawfor">Crawford</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-section">
+                    <h3>Quality & Age</h3>
+                    <div class="input-group">
+                        <label for="OverallQual">Overall Quality (1-10)</label>
+                        <input type="range" id="OverallQual" min="1" max="10" value="7">
+                    </div>
+                    <div class="input-group">
+                        <label for="YearBuilt">Year Built</label>
+                        <input type="number" id="YearBuilt" value="2003" required>
+                    </div>
+                </div>
+
+                <div class="form-section">
+                    <h3>Living Space</h3>
+                    <div class="input-group">
+                        <label for="GrLivArea">Living Area (sqft)</label>
+                        <input type="number" id="GrLivArea" value="1710" required>
+                    </div>
+                    <div class="input-group">
+                        <label for="FullBath">Full Bathrooms</label>
+                        <input type="number" id="FullBath" value="2" required>
+                    </div>
+                </div>
+            </div>
+
+            <button type="submit" id="predictBtn">
+                <span class="btn-text">Predict Property Price</span>
+                <div class="loader" id="loader"></div>
+            </button>
+        </form>
+
+        <div id="result" class="result-card hidden">
+            <h3>Estimated Market Value</h3>
+            <div class="price-display">
+                <span class="currency">$</span>
+                <span id="predictedPrice" class="price">--</span>
+            </div>
+            <p class="disclaimer">Based on current market trends and model logic.</p>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
