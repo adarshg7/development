@@ -10,6 +10,7 @@ import java.util.List;
 @Entity
 @Setter
 @Getter
+@Table(name = "employees")
 public class Employee {
 
     @Id

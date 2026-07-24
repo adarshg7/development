@@ -47,7 +47,7 @@ public class EmployeeServiceImpl implements EmployeeService {
 
         employee.setDepartment(department);
 
-        List<Skill> skills = skillRepository.getAllById(dto.getSkillIds());
+        List<Skill> skills = skillRepository.findByIdIn(dto.getSkillIds());
         employee.setSkills(skills);
 
         Employee savedEmployee = employeeRepository.save(employee);

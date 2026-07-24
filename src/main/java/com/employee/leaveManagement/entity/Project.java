@@ -1,11 +1,15 @@
 package com.employee.leaveManagement.entity;
 
 import jakarta.persistence.*;
+import lombok.Getter;
+import lombok.Setter;
 
 import java.time.LocalDate;
 import java.util.List;
 
 @Entity
+@Getter
+@Setter
 @Table(name="projects")
 public class Project {
 
@@ -21,6 +25,6 @@ public class Project {
 
     private LocalDate endDate;
 
-    @ManyToMany(mappedBy = "projects")
+    @ManyToMany(mappedBy = "project")
     private List<Employee> employee;
 }

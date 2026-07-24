@@ -16,9 +16,6 @@ public class LeaveRequestMapper {
         leave.setEndDate(dto.getEndDate());
         leave.setReason(dto.getReason());
 
-        // Employee and LeaveType
-        // will be set inside Service
-
         return leave;
     }
 
