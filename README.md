@@ -1,4 +1,4 @@
-Leave Management System
+**Leave Management System**
 
 A backend Leave Management System built using Spring Boot, Spring Data JPA, and MySQL. The application provides REST APIs to manage employees, departments, skills, projects, leave types, and leave requests using a clean layered architecture.
 
