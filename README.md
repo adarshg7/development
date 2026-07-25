@@ -137,7 +137,7 @@ DELETE	/leave-requests/{id}
 **Architecture**
 
 The project follows a layered architecture:
-
+```text
 Client
    │
    ▼
@@ -151,7 +151,7 @@ Repository
    │
    ▼
 MySQL Database
-
+```
 DTOs and Mappers are used to separate API models from database entities.
 
 **Concepts Demonstrated**
