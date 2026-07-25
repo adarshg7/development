@@ -64,6 +64,7 @@ Project
 Leave Type
 Leave Request
 Relationships
+```text
 Department
       │
       │ One Department
@@ -87,6 +88,7 @@ Leave Request
 One Leave Type
      │
 Leave Type
+```
 
 **REST APIs**
 Employee
