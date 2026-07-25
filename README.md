@@ -30,6 +30,7 @@ Lombok
 REST API
 
 **Project Structure**
+```text
 src
 └── main
     ├── java
@@ -48,9 +49,9 @@ src
     │       │   └── leaveType
     │       ├── mapper
     │       └── LeaveManagementApplication.java
-    │
     └── resources
         └── application.properties
+```
         
 **Database Schema**
 
